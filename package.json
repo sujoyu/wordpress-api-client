@@ -22,7 +22,7 @@
 		"prepack": "yarn pinst --disable",
 		"postpack": "yarn pinst --enable"
 	},
-	"types": "./dist/index.d.ts",
+	"types": "./src/index.ts",
 	"contributors": [
 		{
 			"name": "Damian Kress",
