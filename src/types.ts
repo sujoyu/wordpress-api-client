@@ -1,4 +1,3 @@
-import { URLSearchParams } from 'url'
 import {
 	WP_REST_API_Attachment,
 	WP_REST_API_Category,

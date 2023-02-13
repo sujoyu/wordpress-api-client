@@ -1,5 +1,3 @@
-import { URLSearchParams } from 'url'
-
 import {
 	END_POINT_PROTECTED,
 	END_POINT_PUBLIC,

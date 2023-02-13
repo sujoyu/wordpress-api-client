@@ -1,5 +1,4 @@
 import { isRecord, isString } from '@tool-belt/type-predicates'
-import { URLSearchParams } from 'url'
 import {
 	WP_Post_Type_Name,
 	WP_REST_API_Application_Password,
@@ -667,9 +666,9 @@ export class WpApiClient {
 			const endpoint = `${END_POINT.USERS}/${String(userId)}/${
 				END_POINT.USER_APPLICATION_PASSWORDS
 			}/${uuid}`
-			const params = new Map()
-			if (name) params.set('name', name)
-			if (appId) params.set('app_id', appId)
+			const params: { [key: string]: string } = {}
+			if (name) params.name = name
+			if (appId) params.app_id = appId
 			return this.http.post<WP_REST_API_Application_Password>(
 				`${endpoint}?${new URLSearchParams(params).toString()}`,
 			)
